@@ -112,7 +112,7 @@
 			$res=mysqli_query($db,"SELECT student.studentid,FullName,studentpic,books.bookid,bookname,ISBN,price,bookpic,authors.authorname,category.categoryname,issueinfo.issuedate,returndate,approve,fine FROM student inner join issueinfo on student.studentid=issueinfo.studentid inner join books on issueinfo.bookid=books.bookid join authors on authors.authorid=books.authorid join category on category.categoryid=books.categoryid where (issueinfo.approve='yes' or issueinfo.approve='$var') ORDER BY `issueinfo`.`returndate` ASC;");
             if(mysqli_num_rows($res)==0)
 			{
-				echo "There's no issued books.";
+				echo "There's no issued books."; 
 			}
             else{
                 echo "<table class='rtable booktable'>";

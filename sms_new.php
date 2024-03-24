@@ -1,6 +1,7 @@
 <?php
 // Include the Africa's Talking SDK
 require 'vendor/autoload.php';
+include "connection.php";
 
 use AfricasTalking\SDK\AfricasTalking;
 
@@ -37,10 +38,7 @@ if ($result->num_rows > 0) {
     $message = "Some books have expired!";
 
     // Set up recipients
-    $recipients = array(
-        array("PhoneNumber" => "PHONE_NUMBER1"),
-        array("PhoneNumber" => "PHONE_NUMBER2")
-    );
+    $recipients = '+254795426367';
 
     // Send SMS
     try {

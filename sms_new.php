@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
     $sms = $AT->sms();
 
     // Set up message
-    $message = "Some books have expired!";
+    $message = "Your books have expired!";
 
     // Set up recipients
     $recipients = '+254795426367';
